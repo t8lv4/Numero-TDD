@@ -3,7 +3,6 @@
 //  NumeroTests
 //
 //  Created by Morgan on 28/08/2018.
-//  Copyright © 2018 Facebook. All rights reserved.
 //
 
 import XCTest
@@ -21,6 +20,11 @@ class ConverterTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+
+    func testConversionForOne() {
+        let result = converter.convert(1)
+        XCTAssertEqual(result, "I", "Conversion for 1 is incorrect")
     }
     
 }
