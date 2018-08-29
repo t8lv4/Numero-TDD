@@ -9,6 +9,10 @@ class Converter {
             result += "X"
             localNumber = localNumber - 10
         }
+        if localNumber >= 9 {
+            result += "IX"
+            localNumber = localNumber - 9
+        }
         if localNumber >= 5 {
             result += "V"
             localNumber = localNumber - 5
