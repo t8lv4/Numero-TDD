@@ -13,6 +13,10 @@ class Converter {
             result += "V"
             localNumber = localNumber - 5
         }
+        if localNumber >= 4 {
+            result += "IV"
+            localNumber = localNumber - 4
+        }
         result += String(repeating: "I", count: localNumber)
         return result
     }
