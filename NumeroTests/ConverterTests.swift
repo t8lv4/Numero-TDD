@@ -61,4 +61,24 @@ class ConverterTests: XCTestCase {
         let result = converter.convert(9)
         XCTAssertEqual(result, "IX", "Conversion for 9 is incorrect")
     }
+
+    func testConversionForZero() {
+        let result = converter.convert(0)
+        XCTAssertEqual(result, "", "Conversion for 0 is incorrect")
+    }
+
+    func testConversionFor3999() {
+        let result = converter.convert(3999)
+        XCTAssertEqual(result, "MMMCMXCIX", "Conversion for 3999 is incorrect")
+    }
+
+    func testConversionForFourty() {
+        let result = converter.convert(40)
+        XCTAssertEqual(result, "XL", "Conversion for 40 is incorrect")
+    }
+
+    func testConversionFor400() {
+        let result = converter.convert(400)
+        XCTAssertEqual(result, "CD", "Conversion for 400 is incorrect")
+    }
 }
